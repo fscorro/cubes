@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+                <title>Battleship</title>
+                <meta name="author" content="Corro Felipe" />
+
+                <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        </head>
+        <body class="experiment">
+                <style>
+                        #experiment {
+                          -webkit-perspective: 800; 
+                          -webkit-perspective-origin: 50% 200px;
+
+                          -moz-perspective: 800; 
+                          -moz-perspective-origin: 50% 200px;
+                        }
+
+                        #transDemo3 {
+                          -webkit-perspective: 800px;
+                          -webkit-perspective-origin: 50% 100px;
+
+                          -moz-perspective: 800px;
+                          -moz-perspective-origin: 50% 100px;
+
+                          -o-perspective: 800px;
+                          -o-perspective-origin: 50% 100px;
+
+
+                          perspective: 800px;
+                          perspective-origin: 50% 100px;
+                          margin:50px auto;
+                          width:400px;
+                          float:left;
+                        }
+
+                        #transDemo3 #cube {
+                          position: relative;
+                          margin: 0 auto;
+                          height: 20px;
+                          width: 20px;
+                          -webkit-transform-style: preserve-3d;
+                          -webkit-transform-origin:(50% 100px 0);
+                          -moz-transform-style: preserve-3d;
+                          -moz-transform-origin:(50% 100px 0);
+                          -o-transform-style: preserve-3d;
+                          -o-transform-origin:(50% 100px 0);
+                          transform-style: preserve-3d;
+                          transform-origin:(50% 100px 0);
+                        }
+
+                        #transDemo3 #Ycube,#transDemo3 #Zcube {
+                          -webkit-transform-style: preserve-3d;
+                          -moz-transform-style: preserve-3d;
+                          -o-transform-style: preserve-3d;
+                          transform-style: preserve-3d;
+                        }
+
+                        #transDemo3 .face {
+                          position: absolute;
+                          height: 16px;
+                          width: 16px;
+                          padding: 2px;
+                          -webkit-backface-visibility: visible;
+                          -moz-backface-visibility: visible;
+                          -o-backface-visibility: visible;
+                          backface-visibility: visible;
+                          border:1px #000 solid;
+                        }
+
+                        #cube .one  {
+                          -webkit-transform: rotateX(90deg) translateZ(10px);
+                          -moz-transform: rotateX(90deg) translateZ(10px);
+                          -o-transform: rotateX(90deg) translateZ(10px);
+                          transform: rotateX(90deg) translateZ(10px);
+                        }
+
+                        #cube .two {
+                          -webkit-transform: translateZ(10px);
+                          -moz-transform: translateZ(10px);
+                          -o-transform: translateZ(10px);
+                          transform: translateZ(10px);
+                        }
+
+                        #cube .three {
+                          -webkit-transform: rotateY(90deg) translateZ(10px);
+                          -moz-transform: rotateY(90deg) translateZ(10px);
+                          -o-transform: rotateY(90deg) translateZ(10px);
+                          transform: rotateY(90deg) translateZ(10px);
+                        }
+
+                        #cube .four {
+                          -webkit-transform: rotateY(180deg) translateZ(10px);
+                          -moz-transform: rotateY(180deg) translateZ(10px);
+                          -o-transform: rotateY(180deg) translateZ(10px);
+                          transform: rotateY(180deg) translateZ(10px);
+                        }
+
+                        #cube .five {
+                          -webkit-transform: rotateY(-90deg) translateZ(10px);
+                          -moz-transform: rotateY(-90deg) translateZ(10px);
+                          -o-transform: rotateY(-90deg) translateZ(10px);
+                          transform: rotateY(-90deg) translateZ(10px);
+                        }
+
+                        #cube .six {
+                          -webkit-transform: rotateX(-90deg) translateZ(10px) rotate(180deg);
+                          -moz-transform: rotateX(-90deg) translateZ(10px) rotate(180deg);
+                          -o-transform: rotateX(-90deg) translateZ(10px) rotate(180deg);
+                          transform: rotateX(-90deg) translateZ(10px) rotate(180deg);
+                        }
+                </style>
+                <div id="experiment">
+                    <div id="transDemo3">
+                      <div id="Zcube" style="-webkit-transform: rotateZ(4deg);">
+                        <div id="Ycube" style="-webkit-transform: rotateY(-25deg);">
+                          <div id="cube" style="-webkit-transform: rotateX(-14deg);">
+                            <div class="face one"></div>
+                            <div class="face two"></div>
+                            <div class="face three"></div>
+                            <div class="face four"></div>
+                            <div class="face five"></div>
+                            <div class="face six"></div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        </body>
+</html>
